@@ -8,6 +8,7 @@ do
         cd busybox-1.26.2
         make defconfig
         (time make -j1) &> busybox-$(date +%s).log
+        mv *.log ..
         cd ..
         rm -rf busybox-1.26.2
 
@@ -15,6 +16,7 @@ do
         cd linux-4.10.12
         make defconfig
         (time make -j1) &> linux-$(date +%s).log
+        mv *.log ..
         cd ..
         rm -rf linux-4.10.12
 
@@ -22,6 +24,7 @@ do
         cd coreutils-8.27
         ./configure
         (time make -j1) &> coreutils-$(date +%s).log
+        mv *.log ..
         cd ..
         rm -rf coreutils-8.27
     done
