@@ -1,3 +1,4 @@
+set -e
 (nproc) &> cores.log
 
 for c in {1..8}
