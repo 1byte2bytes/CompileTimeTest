@@ -2,7 +2,7 @@ from glob import glob
 
 def getTimes(project):
     # Get all log files for project
-    files = glob.glob(project + "-*")
+    files = glob(project + "-*")
     sortedFiles = sorted(files)
     # Set empty variables for later use
     results = []
