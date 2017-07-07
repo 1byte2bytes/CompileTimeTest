@@ -1,4 +1,4 @@
-(getconf _NPROCESSORS_ONLN) &> cores.log
+(nproc) &> cores.log
 
 for c in {1..$(nproc)}
 do
