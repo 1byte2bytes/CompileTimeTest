@@ -1,6 +1,6 @@
 # CompileTimeTest
 
-Make sure Clang and the developer tools are installed.
+Make sure CMake and the developer tools are installed.
 
 How to do:
 ```
