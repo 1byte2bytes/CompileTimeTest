@@ -26,13 +26,18 @@ def getTimes(project):
                 if line.startswith("real\t"):
                     # Split the line to get the number
                     time = line.split("real\t")[1].strip()
+                    # Get the amount of minutes and seconds the test took
+                    timeSplit = time.split("m")
+                    minutes = timeSplit[0]
+                    secondsTemp = timeSplit[1][:-1]
+                    # Convert minutes to seconds
+                    seconds = (float(minutes)*60)+float(secondsTemp)
                     # Record that to the list in results for the current core count
-                    results[int(cores)-1].append(time)
+                    results[int(cores)-1].append(seconds)
 
     # Output results to a CSV
     with open("results-" + project + ".csv", "w") as f:
         for row in results:
-            print(row)
             f.write(','.join(['"'+i+'"' for i in row]))
             f.write('\n')
 
