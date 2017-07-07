@@ -33,7 +33,7 @@ def getTimes(project):
                     # Convert minutes to seconds
                     seconds = (float(minutes)*60)+float(secondsTemp)
                     # Record that to the list in results for the current core count
-                    results[int(cores)-1].append(seconds)
+                    results[int(cores)-1].append(str(seconds))
 
     # Output results to a CSV
     with open("results-" + project + ".csv", "w") as f:
