@@ -6,4 +6,4 @@ curl https://ftp.gnu.org/gnu/coreutils/coreutils-8.27.tar.xz > coreutils-8.27.ta
 curl http://releases.llvm.org/4.0.1/llvm-4.0.1.src.tar.xz > llvm-4.0.1.src.tar.xz
 curl http://releases.llvm.org/4.0.1/cfe-4.0.1.src.tar.xz > cfe-4.0.1.src.tar.xz
 curl http://releases.llvm.org/4.0.1/clang-tools-extra-4.0.1.src.tar.xz > clang-tools-extra-4.0.1.src.tar.xz
-http://releases.llvm.org/4.0.1/compiler-rt-4.0.1.src.tar.xz > compiler-rt-4.0.1.src.tar.xz
+curl http://releases.llvm.org/4.0.1/compiler-rt-4.0.1.src.tar.xz > compiler-rt-4.0.1.src.tar.xz
