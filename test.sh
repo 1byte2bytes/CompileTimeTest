@@ -1,6 +1,6 @@
 (getconf _NPROCESSORS_ONLN) &> cores.log
 
-for c in {1..8}
+for c in {1..$(nproc)}
 do
     for i in {1..10}
     do
