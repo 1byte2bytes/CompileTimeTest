@@ -42,7 +42,7 @@ do
         
         mkdir build-clang
         cd build-clang
-        (cmake -G "Unix Makefiles" ../llvm) &> /dev/null
+        (cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release ../llvm) &> /dev/null
         (time make -j$c) &> ../clang-$c-$(date +%s).log
         cd ..
         rm -rf llvm
