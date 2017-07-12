@@ -28,5 +28,21 @@ do
         (time make -j$c) &> ../coreutils-$c-$(date +%s).log
         cd ..
         rm -rf coreutils-8.27
+        
+        echo PYTHON 3 CORE COUNT $c - TRY COUNT $i
+        tar -xf Python-3.6.1.tgz
+        cd Python-3.6.1
+        (./configure) &> /dev/null
+        (time make -j$c) &> ../python3-$c-$(date +%s).log
+        cd ..
+        rm -rf Python-3.6.1
+        
+        echo PYTHON 2 CORE COUNT $c - TRY COUNT $i
+        tar -xf Python-2.7.13.tgz
+        cd Python-2.7.13
+        (./configure) &> /dev/null
+        (time make -j$c) &> ../python2-$c-$(date +%s).log
+        cd ..
+        rm -rf Python-2.7.13
     done
 done
