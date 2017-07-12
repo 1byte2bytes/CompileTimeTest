@@ -44,3 +44,5 @@ def getTimes(project):
 getTimes("busybox")
 getTimes("linux")
 getTimes("coreutils")
+getTimes("python3")
+getTimes("python2")
