@@ -13,13 +13,13 @@ do
         cd ..
         rm -rf busybox-1.27.0
 
-        #echo LINUX CORE COUNT $c - TRY COUNT $i
-        #tar -xf linux-4.12.tar.xz
-        #cd linux-4.12
-        #(make defconfig) &> /dev/null
-        #(time make -j$c) &> ../linux-$c-$(date +%s).log
-        #cd ..
-        #rm -rf linux-4.12
+        echo LINUX CORE COUNT $c - TRY COUNT $i
+        tar -xf linux-4.12.tar.xz
+        cd linux-4.12
+        (make defconfig) &> /dev/null
+        (time make -j$c) &> ../linux-$c-$(date +%s).log
+        cd ..
+        rm -rf linux-4.12
 
         echo COREUTILS CORE COUNT $c - TRY COUNT $i
         tar -xf coreutils-8.27.tar.xz
