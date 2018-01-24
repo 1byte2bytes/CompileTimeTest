@@ -12,11 +12,11 @@ do
         (/usr/bin/time -f "%E %P %M" make -j$c) &> ../busybox-$c-$(date +%s).log
         cd ..
         rm -rf busybox-1.27.0
-
-        echo LINUX CORE COUNT $c - TRY COUNT $i
+        
         tar -xf linux-4.14.15.tar.xz
         cd linux-4.14.15
-        (make defconfig) &> /dev/null
+        make defconfig
+        echo LINUX CORE COUNT $c - TRY COUNT $i
         (/usr/bin/time -f "%E %P %M" make -j$c) &> ../linux-$c-$(date +%s).log
         cd ..
         rm -rf linux-4.12
