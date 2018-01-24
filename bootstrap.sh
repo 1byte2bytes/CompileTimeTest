@@ -1,6 +1,6 @@
 apt-get update
-apt-get build-dep busybox coreutils python2.7 python3
-apt-get install curl build-essential
+apt-get build-dep -y busybox coreutils python2.7 python3
+apt-get install -y curl build-essential
 curl https://www.busybox.net/downloads/busybox-1.27.0.tar.bz2 > busybox-1.27.0.tar.bz2
 #curl https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.12.tar.xz > linux-4.12.tar.xz
 curl https://ftp.gnu.org/gnu/coreutils/coreutils-8.27.tar.xz > coreutils-8.27.tar.xz
