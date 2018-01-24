@@ -42,7 +42,6 @@ def getTimes(project):
             f.write('\n')
 
 getTimes("busybox")
-getTimes("linux")
 getTimes("coreutils")
 getTimes("python3")
 getTimes("python2")
