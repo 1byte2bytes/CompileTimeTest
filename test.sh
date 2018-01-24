@@ -23,7 +23,7 @@ do
 
         tar -xf coreutils-8.27.tar.xz
         cd coreutils-8.27
-        ./configure
+        FORCE_UNSAFE_CONFIGURE=1 ./configure
         echo COREUTILS CORE COUNT $c - TRY COUNT $i
         (/usr/bin/time -f "%E %P %M" make -j$c) &> ../coreutils-$c-$(date +%s).log
         cd ..
