@@ -23,11 +23,11 @@ def getTimes(project):
         with open(filename) as f:
             for line in f.readlines():
                 # Check if line starts with "real   ", this is what the "time" command outputs
-                if line.startswith("real\t"):
+                if line.startswith("\tElapsed (wall clock) time (h:mm:ss or m:ss): "):
                     # Split the line to get the number
-                    time = line.split("real\t")[1].strip()
+                    time = line.split("\tElapsed (wall clock) time (h:mm:ss or m:ss): ")[1].strip()
                     # Get the amount of minutes and seconds the test took
-                    timeSplit = time.split("m")
+                    timeSplit = time.split(":")
                     minutes = timeSplit[0]
                     secondsTemp = timeSplit[1][:-1]
                     # Convert minutes to seconds
