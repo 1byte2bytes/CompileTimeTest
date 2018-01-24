@@ -13,13 +13,13 @@ do
         cd ..
         rm -rf busybox-1.27.0
 
-        #echo LINUX CORE COUNT $c - TRY COUNT $i
-        #tar -xf linux-4.12.tar.xz
-        #cd linux-4.12
-        #(make defconfig) &> /dev/null
-        #(/usr/bin/time -f "%E %P %M" make -j$c) &> ../linux-$c-$(date +%s).log
-        #cd ..
-        #rm -rf linux-4.12
+        echo LINUX CORE COUNT $c - TRY COUNT $i
+        tar -xf linux-4.14.15.tar.xz
+        cd linux-4.14.15
+        (make defconfig) &> /dev/null
+        (/usr/bin/time -f "%E %P %M" make -j$c) &> ../linux-$c-$(date +%s).log
+        cd ..
+        rm -rf linux-4.12
 
         tar -xf coreutils-8.27.tar.xz
         cd coreutils-8.27
@@ -36,13 +36,5 @@ do
         (/usr/bin/time -f "%E %P %M" make -j$c) &> ../python3-$c-$(date +%s).log
         cd ..
         rm -rf Python-3.6.1
-        
-        tar -xf Python-2.7.13.tgz
-        cd Python-2.7.13
-        ./configure
-        echo PYTHON 2 CORE COUNT $c - TRY COUNT $i
-        (/usr/bin/time -f "%E %P %M" make -j$c) &> ../python2-$c-$(date +%s).log
-        cd ..
-        rm -rf Python-2.7.13
     done
 done
